@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>客服中心</title>
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<link rel="stylesheet" href="__WCSS__/meCena.css">
+
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<script type="text/javascript" src="__COM__/js/index.js"></script>
+<body class="bg96">
+	
+	<div class="header">
+	    <div class="header_l">
+	    <a href="javascript:history.go(-1)"><img src="__WIMG__/jiant.png" alt=""></a>
+	    </div>
+	    <div class="header_c"><h2>客服中心</h2></div>
+	    <div class="header_r"></div>
+	</div>
+
+       <div class="big_width">
+	     <div class="pad10"></div>
+	   
+		   <div class="myBankCard" >
+			   <a href="javascript:void(0);" onclick="isDefault({$v['is_default']},{$v['id']},'bank')" class="clear_wl">
+				   <img src="__WIMG__/qq.png">
+				   <div class="yhxx">
+					   <p>QQ客服</p>
+					   <p>123456789</p>
+					   <img style="width:158px; height:auto;" src="__WIMG__/rem.png">
+				   </div>
+			   </a>
+			  
+		   </div>
+			<div class="myBankCard" >
+			   <a href="javascript:void(0);" onclick="isDefault({$v['is_default']},{$v['id']},'bank')" class="clear_wl">
+				   <img src="__WIMG__/wx.png">
+				   <div class="yhxx">
+					   <p>微信客服</p>
+					   
+					   <img style="width:158px; height:auto;" src="__WIMG__/rem.png">
+				   </div>
+			   </a>
+			  
+		   </div>
+	   </div>
+</body>
+</html>
+<script>
+
+
+	function isDefault(is_default,cid,lei){
+		<?php if(empty($type)){ ?> 
+			var type = 0;
+		<?php }else{ ?>
+			var type = '{$type}';
+		<?php } ?>
+
+		$.post('/Growth/isDefault',{'is_default':is_default,'cid':cid,'type':type,'lei':lei},function(res){
+			if(res.status == 0){
+				msg_alert(res.message,res.url);
+			}else{
+				msg_alert(res.message);
+				setTimeout(function(){window.location.reload();})
+			}
+		},'json');
+	}
+
+
+
+	function deleteb(e) {
+		var bangid = $(e).attr('data-id');
+		var type = $(e).attr('data');
+		if(bangid == ''){
+			msg_alert('请选择对应银行卡进行操作');
+		}
+        $.ajax({
+            url:'/Growth/Cardinfos',
+            type:'post',
+            data:{'bangid':bangid,'type':type},
+            datatype:'json',
+            success:function (mes) {
+                if(mes.status == 1){
+                    msg_alert(mes.message,mes.url);
+                }else{
+                    msg_alert(mes.message);
+                }
+            }
+        })
+    }
+</script>

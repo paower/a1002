@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>排单币收益</title>
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__WJS__/responsive.tabs.js"></script>
+<script src="__WJS__/iscroll.js"></script>
+<script type="text/javascript" src="__WJS__/jquery.reveal.js"></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<script type="text/javascript" src="__WJS__/jquery.form.js"></script>
+<script type="text/javascript" src="__COM__/js/index.js"></script>
+<body class="bg96">
+
+<div class="header">
+    <div class="header_l">
+        <a href="{:U('Growth/Purchase')}"><img src="__WIMG__/jiant.png" alt=""></a>
+    </div>
+    <div class="header_c"><h2>排单币收益</h2></div>
+    <div class="header_r"></div>
+</div>
+
+<div class="demo">
+    <div class="accordion">
+
+        <foreach name="list" item="v">
+            <div class="accordion-handle">
+                <h4>
+                    <p class="accmrp">收益金额：{$v['pay_nums']}RMB<span class="acco_con_span">{$Think.lang.ywc}</span></p>
+                    <p>{$v['pay_time']|date="Y-m-d H:i:s",###}<span>买入会员：{$v['payout_id']}</span></p>
+                    <if condition="$v['time'] gt 0">
+                        <p id="countdown">倒计时：<b id="timer{$key}" style="font-weight:normal;">{$v['day']}天 {$v['house']}小时{$v['min']}分钟</b><span>排单币收益</span></p>
+                        <p id="countdown">预计总收益：
+                        <?php echo $v['dj_num']; ?>
+                        <span>奖励：
+                            {$v['dj_num']}
+                            
+                        </span></p>
+                    
+                   
+                    </if>
+                    
+                    <if condition="$v[time] elt 0 AND $v[pay_state] eq 2">
+                        <input type="hidden" name="yingc" value="{$v.id}">
+                        <input type="hidden" name="token_code" value="{$token_code}"/>
+                        <p id="countdown">倒计时结束收益:{$v['dj_num']}
+                            <if condition="$v['pay_state'] eq 2">
+                                <button style="border-radius: 30px;background: red;border: 0px;width: 80px;height: 30px;color: #fff;float: right;" type="button" onclick="sub('{$v.id}')">确认领取</button>
+                            </if>
+                        </p>
+                    </if>
+                 
+                </h4>
+                <!-- <i></i> -->
+            </div>
+        </foreach>
+
+        <notempty name="page">
+            <!-- <ul class="pagination">{$page}</ul> -->
+        </notempty>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function sub(id){
+
+        $.post("{:U('Growth/linqu_paidan')}",{id:id},function(res){
+            if(res.status==1){
+                msg_alert(res.message);
+                setTimeout(function(){
+                    location.reload();
+                },2000)
+            }else{
+                msg_alert(res.message);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $('.accordion').respTabs({
+            model: 'accordions'
+        });
+    });
+
+
+    var addTimer = function(){
+        var list = [],
+            interval;
+            
+        return function(id,timeStamp){
+            if(!interval){
+                interval = setInterval(go,1);
+            }
+            
+            list.push({ele:document.getElementById(id),time:timeStamp});
+        }
+        
+        function go() {  
+            for (var i = 0; i < list.length; i++) {
+                
+                list[i].ele.innerHTML = changeTimeStamp(list[i].time);  
+                if (!list[i].time)  
+                    list.splice(i--, 1);  
+            }  
+        }
+
+        //传入unix时间戳，得到倒计时
+        function changeTimeStamp(timeStamp){
+            var distancetime = new Date(timeStamp*1000).getTime() - new Date().getTime();
+            if(distancetime > 0){
+　　　　　　　　　　　　　　//如果大于0.说明尚未到达截止时间              
+                var ms = Math.floor(distancetime%1000);
+                var sec = Math.floor(distancetime/1000%60);
+                var min = Math.floor(distancetime/1000/60%60);
+                var hour =Math.floor(distancetime/1000/60/60%24);
+                var day =Math.floor(distancetime/1000/86400);
+                
+                if(ms<100){
+                    ms = "0"+ ms;
+                }
+                if(sec<10){
+                    sec = "0"+ sec;
+                }
+                if(min<10){
+                    min = "0"+ min;
+                }
+                if(hour<10){
+                    hour = "0"+ hour;
+                }
+                return day+"天"+hour + "小时" +min + "分钟" +sec+"秒";
+            }else{
+　　　　　　　　　　　　　　//若否，就是已经到截止时间了
+                return "已截止！"
+            }    
+        }
+    }();
+    <foreach name="list" item="v">
+        <if condition="$v['time'] gt 0">
+            addTimer("timer{$key}",{$v['dj_end_time']});
+        </if>
+    </foreach>
+</script>
+</body>
+</html>

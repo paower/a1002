@@ -1,0 +1,241 @@
+<extend name="Public/layout"/>
+<block name="style" >
+    <link rel="stylesheet" type="text/css" href="__LYUI__/css/lyui.extend.min.css">
+    <link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/style.css">
+</block>
+
+<block name="main">
+   <div id="main" class="col-xs-12 col-sm-9 main" style="overflow-y: scroll;">
+        <!-- 面包屑导航 -->
+        <ul class="breadcrumb">
+            <li><i class="fa fa-map-marker"></i></li>
+            <foreach name="_menu_tab['name']" item="tab_v" >
+            <li class="text-muted">{$tab_v}</li>
+            </foreach>
+             <li class="text-muted">基本设置</li>
+        </ul>
+
+        <!-- 主体内容区域 -->
+        <div class="tab-content ct-tab-content">
+            <div class="panel-body">
+                <div class="builder formbuilder-box">
+                    <div class="builder-tabs builder-form-tabs">
+                        <ul class="nav nav-tabs">
+
+                            <li class="active">
+                                <a href="{:U('Config/group2',array('group'=>1))}">基本设置</a>
+                            </li>
+                        <!-- <li class="">
+                                <a href="{:U('Config/group3')}">众筹设置</a>
+                            </li> -->
+                            <li class="">
+                                <a href="{:U('Config/group4')}">奖励设置</a>
+                            </li>
+
+                            <!-- <li class="">
+                                <a href="{:U('Config/group1',array('group1'=>5))}">实时价格设置</a>
+                            </li> -->
+                            <li class="">
+                                <a href="{:U('Config/group',array('group'=>3))}">网站开关</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group"></div>
+                    <div class="builder-container" >
+                        <div class="row" >
+                            <div class="col-xs-12" >
+                                <form action="{:U('Config/groupSave2')}" method="post" class="form-horizontal form form-builder">
+                                排单计算利息设置<hr style="margin-top: 0px;width: 100%">
+                                <div class="form-type-list">
+                                    <div class="form-group item_config[WEB_SITE_TITLE] ">
+										<label class="left control-label">自动配单开关</label>
+										<div style="width:200px" class="input-group">
+										<input type="radio" name="zidong_sell" value="1" <if condition="$zidong_sell eq 1">checked</if>>开启
+										<input type="radio" name="zidong_sell" value="0" <if condition="$zidong_sell eq 0">checked</if>>关闭
+										</div>
+									</div>
+									<div class="form-group item_config[WEB_SITE_TITLE] ">
+                                        <label class="left control-label">自动配单时间限制于：</label>
+                                        <div style="width:200px" class="input-group">
+                                            <input type="text" name="zidong_sell_time" class="form-control date" value="{$zidong_sell_time}" placeholder="自动配单时间限制" >
+                                        <span class="input-group-addon">之前</span>
+										</div>
+                                    </div>
+                                    <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                        <label class="left control-label">动态会员冻结天数：</label>
+                                        <div style="width:200px" class="input-group">
+                                            <input type="number" name="dj_time" class="form-control" value="{$dj_time}" placeholder="冻结时间需为整数且在0到20之间" >
+                                            <span class="input-group-addon">天</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                        <label class="left control-label">静态会员冻结天数：</label>
+                                        <div style="width:200px" class="input-group">
+                                            <input type="number" name="dj_time_static" class="form-control" value="{$dj_time_static}" placeholder="冻结时间需为整数且在0到20之间" >
+                                            <span class="input-group-addon">天</span>
+                                        </div>
+                                    </div>
+									<!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+										<!-- <label class="left control-label">买入中心开始时间：</label> -->
+										<!-- <div style="width:200px" class="input-group"> -->
+											<!-- <input type="text" name="buy_center_start" class="form-control" value="{$buy_center_start}" placeholder="买入中心开始时间(格式：00:00)" > -->
+										<!-- </div> -->
+									<!-- </div> -->
+									<!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+										<!-- <label class="left control-label">买入中心结束时间：</label> -->
+										<!-- <div style="width:200px" class="input-group"> -->
+											<!-- <input type="text" name="buy_center_end" class="form-control" value="{$buy_center_end}" placeholder="买入中心结束时间(格式：00:00)" > -->
+										<!-- </div> -->
+									<!-- </div> -->
+									<!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                        <!-- <label class="left control-label">买入中心开关</label> -->
+                                        <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="radio" name="buycenter" value="1" <if condition="$buycenter eq 1">checked</if>>开启 -->
+                                                <!-- <input type="radio" name="buycenter" value="0" <if condition="$buycenter eq 0">checked</if>>关闭 -->
+                                        <!-- </div> -->
+                                    <!-- </div> -->
+
+                                    <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                        <label class="left control-label">抢名额开关</label>
+                                        <div style="width:200px" class="input-group">
+                                                <input type="radio" name="qiang_quota_switch" value="1" <if condition="$qiang_quota_switch eq 1">checked</if>>开启
+                                                <input type="radio" name="qiang_quota_switch" value="0" <if condition="$qiang_quota_switch eq 0">checked</if>>关闭
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group bottom_button_list">
+                                        <a class="btn btn-primary submit ajax-post" type="submit" target-form="form-builder">确定</a>
+                                        <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a>
+                                    </div>
+                            </div>
+                        </form>
+
+                        <form action="{:U('Config/groupSave2')}" method="post" class="form-horizontal form form-builder">
+                            买入卖出时间<hr style="margin-top: 0px;width: 100%">
+                            <div class="form-type-list">
+                                <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">买入开始时间：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="purchase_start" class="form-control" value="{$purchase_start}" placeholder="买入开始时间(格式：00:00)" >
+                                    </div>
+                                </div>
+                                <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">买入结束时间：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="purchase_end" class="form-control" value="{$purchase_end}" placeholder="买入结束时间(格式：00:00)" >
+                                    </div>
+                                </div>
+                                <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">卖出开始时间：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="sellcentr_start" class="form-control" value="{$sellcentr_start}" placeholder="卖出开始时间(格式：00:00)" >
+                                    </div>
+                                </div>
+                                <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">卖出结束时间：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="sellcentr_end" class="form-control" value="{$sellcentr_end}" placeholder="卖出结束时间(格式：00:00)" >
+                                    </div>
+                                </div>
+								<div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">预约开始时间：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="yuyue_start_time" class="form-control" value="{$yuyue_start_time}" placeholder="预约开始时间(格式：00:00)" >
+                                    </div>
+                                </div>
+                                <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">预约结束时间：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="yuyue_end_time" class="form-control" value="{$yuyue_end_time}" placeholder="预约结束时间(格式：00:00)" >
+                                    </div>
+                                </div>
+                                <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                    <label class="left control-label">预约开关</label>
+                                    <div style="width:200px" class="input-group">
+                                            <input type="radio" name="yuyue_switch_time" value="1" <if condition="$yuyue_switch_time eq 1">checked</if>>开启
+                                            <input type="radio" name="yuyue_switch_time" value="0" <if condition="$yuyue_switch_time eq 0">checked</if>>关闭
+                                    </div>
+                                </div>
+                                <div class="form-group bottom_button_list">
+                                    <a class="btn btn-primary submit ajax-post" type="submit" target-form="form-builder">确定</a>
+                                    <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form action="{:U('Config/setLogoAndTitle')}" method="post" class="form-horizontal form form-builder base3" enctype="multipart/form-data">
+                            logo平台修改<hr style="margin-top: 0px;width: 100%">
+                            <div class="form-type-list">
+                                <div class="form-group ">
+                                    <label class="left control-label">平台名称：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="text" name="platform_name" class="form-control" value="{$platform_name}" placeholder="平台名称" >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="left control-label">logo替换：</label>
+                                    <div style="width:200px" class="input-group">
+                                        <input type="file" name="file" class="form-control" value="" placeholder="logo" >
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group showimg" <if condition="$logo eq ''">style="display:none;"</if>>
+                                    <!-- <label class="left control-label">logo替换：</label> -->
+                                    <div style="width:200px" class="input-group">
+                                        <img class="img" src="{$logo}" width="200px" height="200px">
+                                        <input name="logo" type="hidden" value="{$logo}"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group bottom_button_list">
+                                    <button class="btn btn-primary submit ajax-post" type="submit" target-form="base3">确定</button>
+                                    <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>                   
+</div>
+</block>
+
+<block name="script">
+    <script>
+        $("input[name='file']").change(function(){
+            file = $(this).get(0).files[0];
+            var formData = new FormData();
+            formData.append('file',file);
+            $.ajax({
+                url:"{:U('Config/uploadOneImg')}",
+                type:'post',
+                data:formData,
+                dataType:'JSON',
+                processData:false,
+                contentType :false,
+                cache:false,
+                success:function(res){
+                    if(res.status == 1){
+                        $('.img').attr('src',res.message);
+                        $('input[name="logo"]').val(res.message);
+                        $('.showimg').show();
+                    }else{
+                        alert(res.message);
+                    }
+                }
+            })
+        });    
+
+        $('.date').datetimepicker({
+            format: 'yyyy-mm-dd',
+            language:"zh-CN",
+            minView:2,
+            autoclose:true,
+            todayBtn:1, //是否显示今日按钮
+        });
+    </script>
+    <script type="text/javascript" src="__LYUI__/js/lyui.extend.min.js"></script>
+</block>

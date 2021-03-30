@@ -1,0 +1,388 @@
+[ 2021-01-30T10:10:50+08:00 ] 127.0.0.1 /logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-30T10:10:54+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.1895s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0068s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611972653 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0361s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611972654 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0059s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_banner` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `ysk_banner` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SELECT `img_head`,`userid`,`account`,`username`,`user_credit`,`releas_time`,`is_reward`,`today_releas`,`quanxian`,`vip_grade`,`activate`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_store` [ RunTime:0.0059s ]
+SQL: SELECT `cangku_num`,`fengmi_num`,`dt_jifen`,`active_num`,`paidan`,`red_integral`,`paidan_profit`,`qiangdan_profit` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'false_user' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'add_user' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_config` WHERE `name` = 'min_balance' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'platform_name' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `total_revenue` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidanprofit` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `ysk_paidanprofit` WHERE `uid` = 999854 AND `status` = 0 ORDER BY id  [ RunTime:0.0010s ]
+SQL: SELECT `is_paidan`,`automatic_paidan_switch` FROM `ysk_user` WHERE ( userid=999854 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `purchase_num` FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 0 ORDER BY id LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: can_get E:\a1002\shop\Home\Controller\IndexController.class.php 第 69 行.
+NOTIC: [8] Undefined variable: is_setnums E:\a1002\shop\Home\Controller\IndexController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 81 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 81 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: activate E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 126 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 126 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 134 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 134 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 142 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 142 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 150 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 150 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-30T10:10:54+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-30T14:51:07+08:00 ] 127.0.0.1 /Index/Exchangerecords/type/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611989467 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0039s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611989467 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_tranmoney` [ RunTime:0.0684s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('29','32','104','108','997') LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('29','32','104','108','997') ORDER BY id desc LIMIT 0,50   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 100499 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-30T14:54:09+08:00 ] 127.0.0.1 /Index/Exchangerecords/type/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0068s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611989649 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611989649 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0039s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_tranmoney` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('29','32','104','108','997') LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('29','32','104','108','997') ORDER BY id desc LIMIT 0,50   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 100499 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-30T14:54:21+08:00 ] 127.0.0.1 /Index/Exchangerecords/type/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611989661 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0039s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611989661 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0039s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_tranmoney` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('29','32','104','108','997') LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('29','32','104','108','997') ORDER BY id desc LIMIT 0,50   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 100499 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE `userid` = 525253 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-30T17:12:58+08:00 ] 127.0.0.1 /Growth/Purchase/type/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027344s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029297s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0059s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611997978 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611997978 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0039s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pay_no`,`pay_nums`,`yuyue_state`,`yuyue_first_tail` FROM `ysk_trans` WHERE `pay_state` < 2 AND `payin_id` = 999854 AND `form` = 2 AND `yuyue_state` IN ('0','1') ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT `automatic_paidan_switch`,`automatic_paidan_day` FROM `ysk_user` WHERE ( userid=999854 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `automatic_paidan_day` FROM `ysk_user` WHERE ( userid = 999854 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pay_time` FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 2 ORDER BY pay_time desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_ubanks` [ RunTime:0.0293s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_ubanks` WHERE ( (`user_id` = '999854') AND (`is_default` = 1) ) LIMIT 1   [ RunTime:0.0742s ]
+SQL: SHOW COLUMNS FROM `ysk_ubanks` [ RunTime:0.0068s ]
+SQL: SELECT u.hold_name,u.id,u.card_number,u.user_id,banks.banq_genre FROM ysk_ubanks as u RIGHT JOIN ysk_bank_name as banks ON u.card_id = banks.pid  WHERE u.user_id = '999854' LIMIT 1   [ RunTime:0.0557s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` WHERE `pid` = 999854 AND `activate` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_trans` WHERE `payin_id` = 999854 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'grab_start' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'grab_end' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `purchase_num` FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name="buycenter" ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: notpur E:\a1002\shop\Home\Controller\GrowthController.class.php 第 481 行.
+NOTIC: [8] Undefined variable: buzidong E:\a1002\shop\Home\Controller\GrowthController.class.php 第 482 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: user_quote_num E:\a1002\shop\Runtime\Cache\Home\70f4186166a5bb381bb487037cb25178.php 第 212 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-30T17:22:36+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0059s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611998556 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611998556 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_banner` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ysk_banner` ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SELECT `img_head`,`userid`,`account`,`username`,`user_credit`,`releas_time`,`is_reward`,`today_releas`,`quanxian`,`vip_grade`,`activate`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_store` [ RunTime:0.0049s ]
+SQL: SELECT `cangku_num`,`fengmi_num`,`dt_jifen`,`active_num`,`paidan`,`red_integral`,`paidan_profit`,`qiangdan_profit` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'false_user' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'add_user' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_config` WHERE `name` = 'min_balance' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'platform_name' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `total_revenue` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidanprofit` [ RunTime:0.0166s ]
+SQL: SELECT * FROM `ysk_paidanprofit` WHERE `uid` = 999854 AND `status` = 0 ORDER BY id  [ RunTime:0.0010s ]
+SQL: SELECT `is_paidan`,`automatic_paidan_switch` FROM `ysk_user` WHERE ( userid=999854 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `purchase_num` FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 0 ORDER BY id LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: can_get E:\a1002\shop\Home\Controller\IndexController.class.php 第 69 行.
+NOTIC: [8] Undefined variable: is_setnums E:\a1002\shop\Home\Controller\IndexController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 81 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 81 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: activate E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 126 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 126 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 134 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 134 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 142 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 142 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 150 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 150 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2021-01-30T17:23:05+08:00 ] 127.0.0.1 /Index/Exchangerecords/type/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0049s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1611998585 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0049s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1611998585 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0059s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_tranmoney` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('102','105','111','112','116','1003','999') LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `ysk_tranmoney` WHERE ( `get_id` = '999854' OR `pay_id` = '999854' ) AND `get_type` IN ('102','105','111','112','116','1003','999') ORDER BY id desc LIMIT 0,50   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m E:\a1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+

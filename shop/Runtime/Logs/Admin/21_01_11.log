@@ -1,0 +1,666 @@
+[ 2021-01-11T14:43:12+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+
+[ 2021-01-11T14:43:12+08:00 ] 127.0.0.1 /admin/Pubss/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2021-01-11T14:43:17+08:00 ] 127.0.0.1 /admin/pubss/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ysk_admin` WHERE `username` = 'admin' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: avatar E:\a1002\shop\Admin\Model\ManageModel.class.php 第 91 行.
+SQL: SHOW COLUMNS FROM `ysk_upload` [ RunTime:0.0059s ]
+NOTIC: [8] Undefined index: email E:\a1002\shop\Admin\Model\ManageModel.class.php 第 94 行.
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ysk_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: avatar E:\a1002\shop\Admin\Model\ManageModel.class.php 第 189 行.
+
+[ 2021-01-11T14:43:19+08:00 ] 127.0.0.1 /admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0059s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Index' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Index' AND `act` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` WHERE ( reg_date BETWEEN 1610294400 AND 1610380800 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trading` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_trading_free` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trading` WHERE ( create_time BETWEEN 1610294400 AND 1610380800 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trading` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trading_free` WHERE ( create_time BETWEEN 1610294400 AND 1610380800 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trading_free` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0059s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM `ysk_trans` WHERE ( `pay_time` >= 1610294400 AND `pay_time` <= 1610380799  ) AND `trans_type` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM `ysk_trans` WHERE ( `pay_time` >= 1610294400 AND `pay_time` <= 1610380799  ) AND `trans_type` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM `ysk_trans` WHERE ( dj_end_time BETWEEN 1610347399 AND dj_end_time AND pay_state=3 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\7278058fa3c501c35aba3e8d579773ef.php 第 70 行.
+NOTIC: [8] Undefined variable: user_activate E:\a1002\shop\Runtime\Cache\Admin\7278058fa3c501c35aba3e8d579773ef.php 第 162 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-11T14:43:23+08:00 ] 127.0.0.1 /admin/User/index/type/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+NOTIC: [2] Declaration of Admin\Controller\UserController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\UserController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'User' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'User' AND `act` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: map E:\a1002\shop\Admin\Common\function.php 第 110 行.
+NOTIC: [8] Undefined variable: level E:\a1002\shop\Admin\Controller\UserController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_user a left JOIN ysk_store b on a.userid=b.uid  WHERE a.activate = 1 AND a.is_paidan = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.is_paidan,a.userid,a.username,a.email,a.activate,a.yinbi,a.account,a.mobile,a.reg_date,a.status,a.pid,b.cangku_num,b.dt_jifen,b.active_num,b.paidan,b.red_integral FROM ysk_user a left JOIN ysk_store b on a.userid=b.uid  WHERE a.activate = 1 AND a.is_paidan = 1 ORDER BY a.reg_date desc LIMIT 0,100   [ RunTime:0.0010s ]
+SQL: SELECT `userid` FROM ysk_user a WHERE a.activate = 1 AND a.is_paidan = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+NOTIC: [8] Undefined variable: data E:\a1002\shop\Admin\Controller\UserController.class.php 第 106 行.
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` WHERE `pid` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user` WHERE `pid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `userid`,`username` FROM `ysk_user` WHERE ( pid="999854" )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_store` [ RunTime:0.0039s ]
+SQL: SELECT `total_revenue` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `pay_time` FROM `ysk_trans` WHERE ( payin_id=999854 ) ORDER BY id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pay_time` FROM `ysk_trans` WHERE ( payin_id=999854 ) ORDER BY id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `cangku_num`,`active_num`,`dt_jifen`,`paidan`,`red_integral` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 78 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 159 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 162 行.
+NOTIC: [8] Undefined index: keyword E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 175 行.
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0059s ]
+SQL: SELECT `account` FROM `ysk_user` WHERE ( userid =102531 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE ( userid=102531 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` WHERE `pid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant shouyi - assumed 'shouyi' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 262 行.
+NOTIC: [8] Use of undefined constant shouyi - assumed 'shouyi' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 262 行.
+NOTIC: [8] Use of undefined constant shouyi - assumed 'shouyi' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 262 行.
+NOTIC: [8] Use of undefined constant forbid - assumed 'forbid' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2021-01-11T14:43:25+08:00 ] 127.0.0.1 /admin/User/userlogin/userid/999854.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\UserController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\UserController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'User' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0020s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'User' AND `act` = 'userlogin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2021-01-11T14:54:08+08:00 ] 127.0.0.1 /admin/Finance/cannot/type/2/first/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'cannot' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payin_id INNER JOIN ysk_store as c on c.uid = a.payin_id  WHERE `yuyue_first_tail` = '1' AND `status` >= '0' AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = '2' AND `yuyue_state` = 0 ORDER BY form asc,yuyue_first_tail asc,id desc  [ RunTime:0.0010s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `yuyue_first_tail` = 1 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `yuyue_first_tail` = 1 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 176 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 150 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 153 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 160 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2021-01-11T14:54:15+08:00 ] 127.0.0.1 /admin/Finance/cannot/type/2/first/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'cannot' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payin_id INNER JOIN ysk_store as c on c.uid = a.payin_id  WHERE `yuyue_first_tail` = '2' AND `status` >= '0' AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = '2' AND `yuyue_state` = 0 ORDER BY form asc,yuyue_first_tail asc,id desc  [ RunTime:0.0010s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `yuyue_first_tail` = 2 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `yuyue_first_tail` = 2 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 176 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 150 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 153 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 171 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 176 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-11T14:54:23+08:00 ] 127.0.0.1 /admin/Finance/cannot/type/2/first/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'cannot' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payin_id INNER JOIN ysk_store as c on c.uid = a.payin_id  WHERE `yuyue_first_tail` = '1' AND `status` >= '0' AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = '2' AND `yuyue_state` = 0 ORDER BY form asc,yuyue_first_tail asc,id desc  [ RunTime:0.0000s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `yuyue_first_tail` = 1 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `yuyue_first_tail` = 1 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 176 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 150 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 153 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 160 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-11T15:11:53+08:00 ] 127.0.0.1 /admin/User/index/type/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\UserController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\UserController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0039s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'User' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'User' AND `act` = 'index' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: map E:\a1002\shop\Admin\Common\function.php 第 110 行.
+NOTIC: [8] Undefined variable: level E:\a1002\shop\Admin\Controller\UserController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_user a left JOIN ysk_store b on a.userid=b.uid  WHERE a.activate = 1 AND a.is_paidan = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.is_paidan,a.userid,a.username,a.email,a.activate,a.yinbi,a.account,a.mobile,a.reg_date,a.status,a.pid,b.cangku_num,b.dt_jifen,b.active_num,b.paidan,b.red_integral FROM ysk_user a left JOIN ysk_store b on a.userid=b.uid  WHERE a.activate = 1 AND a.is_paidan = 1 ORDER BY a.reg_date desc LIMIT 0,100   [ RunTime:0.0010s ]
+SQL: SELECT `userid` FROM ysk_user a WHERE a.activate = 1 AND a.is_paidan = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+NOTIC: [8] Undefined variable: data E:\a1002\shop\Admin\Controller\UserController.class.php 第 106 行.
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` WHERE `pid` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user` WHERE `pid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `userid`,`username` FROM `ysk_user` WHERE ( pid="999854" )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_store` [ RunTime:0.0039s ]
+SQL: SELECT `total_revenue` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT `pay_time` FROM `ysk_trans` WHERE ( payin_id=999854 ) ORDER BY id LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pay_time` FROM `ysk_trans` WHERE ( payin_id=999854 ) ORDER BY id LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `cangku_num`,`active_num`,`dt_jifen`,`paidan`,`red_integral` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 78 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 159 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 162 行.
+NOTIC: [8] Undefined index: keyword E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 175 行.
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SELECT `account` FROM `ysk_user` WHERE ( userid =102531 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username` FROM `ysk_user` WHERE ( userid=102531 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_user` WHERE `pid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant shouyi - assumed 'shouyi' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 262 行.
+NOTIC: [8] Use of undefined constant shouyi - assumed 'shouyi' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 262 行.
+NOTIC: [8] Use of undefined constant shouyi - assumed 'shouyi' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 262 行.
+NOTIC: [8] Use of undefined constant forbid - assumed 'forbid' E:\a1002\shop\Runtime\Cache\Admin\9a111d1ff7e1d627679d543589aa53f1.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021484s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-11T15:11:57+08:00 ] 127.0.0.1 /admin/User/edit/id/999854.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+NOTIC: [2] Declaration of Admin\Controller\UserController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\UserController.class.php 第 10 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0039s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'User' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'User' AND `act` = 'edit' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_ubanks` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `ysk_ubanks` WHERE `user_id` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_bank_name` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ysk_bank_name` ORDER BY q_id asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `account` FROM `ysk_user` WHERE `userid` = 102531 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\3ec631e684f552bd735a80cb6088e63a.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\3ec631e684f552bd735a80cb6088e63a.php 第 73 行.
+NOTIC: [8] Use of undefined constant activate - assumed 'activate' E:\a1002\shop\Runtime\Cache\Admin\3ec631e684f552bd735a80cb6088e63a.php 第 189 行.
+NOTIC: [8] Use of undefined constant activate - assumed 'activate' E:\a1002\shop\Runtime\Cache\Admin\3ec631e684f552bd735a80cb6088e63a.php 第 196 行.
+NOTIC: [8] Use of undefined constant quanxian - assumed 'quanxian' E:\a1002\shop\Runtime\Cache\Admin\3ec631e684f552bd735a80cb6088e63a.php 第 278 行.
+NOTIC: [8] Use of undefined constant quanxian - assumed 'quanxian' E:\a1002\shop\Runtime\Cache\Admin\3ec631e684f552bd735a80cb6088e63a.php 第 285 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-11T15:17:20+08:00 ] 127.0.0.1 /admin/Finance/cannot/type/0/first/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'cannot' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payin_id INNER JOIN ysk_store as c on c.uid = a.payin_id  WHERE `status` >= '0' AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `yuyue_state` = 1 AND `form` IN ('0','1','2','3') ORDER BY form asc,yuyue_first_tail asc,id desc  [ RunTime:0.0010s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `pay_state` IN ('0') AND `payin_id` <> '0' AND `yuyue_state` = 1 AND `form` IN ('0','1','2','3') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `pay_state` IN ('0') AND `payin_id` <> '0' AND `yuyue_state` = 1 AND `form` IN ('0','1','2','3') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 176 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 150 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 153 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 171 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 176 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-11T15:17:37+08:00 ] 127.0.0.1 /admin/Finance/cannot/type/2/first/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'cannot' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0059s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payin_id INNER JOIN ysk_store as c on c.uid = a.payin_id  WHERE `yuyue_first_tail` = '1' AND `status` >= '0' AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = '2' AND `yuyue_state` = 0 ORDER BY form asc,yuyue_first_tail asc,id desc  [ RunTime:0.0010s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `yuyue_first_tail` = 1 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `yuyue_first_tail` = 1 AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `form` = 2 AND `yuyue_state` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 176 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 150 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 153 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 160 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-11T15:17:40+08:00 ] 127.0.0.1 /admin/Finance/cannot/type/0/first/0.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0039s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'cannot' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payin_id INNER JOIN ysk_store as c on c.uid = a.payin_id  WHERE `status` >= '0' AND `pay_state` IN ('0') AND `payin_id` <> '0' AND `yuyue_state` = 1 AND `form` IN ('0','1','2','3') ORDER BY form asc,yuyue_first_tail asc,id desc  [ RunTime:0.0010s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `pay_state` IN ('0') AND `payin_id` <> '0' AND `yuyue_state` = 1 AND `form` IN ('0','1','2','3') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `pay_state` IN ('0') AND `payin_id` <> '0' AND `yuyue_state` = 1 AND `form` IN ('0','1','2','3') LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 176 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000976s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 150 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 153 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 171 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given E:\a1002\shop\Runtime\Cache\Admin\1d79fd600eedb1e8a0da52521acecd02.php 第 176 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2021-01-11T15:17:45+08:00 ] 127.0.0.1 /admin/Finance/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] Declaration of Admin\Controller\FinanceController::setStatus($model = Admin\Controller\CONTROLLER_NAME) should be compatible with Admin\Controller\AdminController::setStatus($model = Admin\Controller\CONTROLLER_NAME, $script = false) E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 11 行.
+NOTIC: [8] Use of undefined constant MODEL_INSERT - assumed 'MODEL_INSERT' E:\a1002\ThinkPHP\Common\functions.php 第 588 行.
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ysk_group` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_menu` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ysk_admin` [ RunTime:0.0049s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `pid`,`gid`,`name` FROM `ysk_menu` WHERE `col` = 'Finance' AND `status` = 1 AND `level` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `ysk_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 1 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc  [ RunTime:0.0010s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_menu` WHERE `status` = 1 AND `level` = 0 ORDER BY sort asc, id asc  [ RunTime:0.0000s ]
+SQL: SELECT `col`,`act` FROM `ysk_menu` WHERE `level` = 2 AND `gid` = 1 ORDER BY sort asc, id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_menu` WHERE `col` = 'Finance' AND `act` = 'index' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0049s ]
+SQL: SELECT * FROM ysk_trans as a INNER JOIN ysk_user as b on b.userid = a.payout_id INNER JOIN ysk_store as c on c.uid = a.payout_id  WHERE `status` >= '0' AND `trans_type` = '1' AND `pay_state` IN ('0') AND `pay_nums` <> 0 ORDER BY pay_time asc  [ RunTime:0.0000s ]
+SQL: SELECT SUM(pay_nums) AS tp_sum FROM ysk_trans as a WHERE `trans_type` = '1' AND `pay_state` IN ('0') AND `pay_nums` <> 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(1) AS tp_count FROM ysk_trans as a WHERE `trans_type` = '1' AND `pay_state` IN ('0') AND `pay_nums` <> 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `auth_id` FROM `ysk_admin` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: financials E:\a1002\shop\Admin\Controller\FinanceController.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title E:\a1002\shop\Runtime\Cache\Admin\54cd1a914712d4bc7c67d7e5b2cd2135.php 第 5 行.
+NOTIC: [8] Undefined variable: _user_auth E:\a1002\shop\Runtime\Cache\Admin\54cd1a914712d4bc7c67d7e5b2cd2135.php 第 73 行.
+NOTIC: [8] Undefined index: date_start E:\a1002\shop\Runtime\Cache\Admin\54cd1a914712d4bc7c67d7e5b2cd2135.php 第 143 行.
+NOTIC: [8] Undefined index: date_end E:\a1002\shop\Runtime\Cache\Admin\54cd1a914712d4bc7c67d7e5b2cd2135.php 第 146 行.
+NOTIC: [8] Undefined index: keyword E:\a1002\shop\Runtime\Cache\Admin\54cd1a914712d4bc7c67d7e5b2cd2135.php 第 207 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+

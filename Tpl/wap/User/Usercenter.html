@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>个人中心</title>
+ <!-- <link rel="stylesheet" href="__WCSS__/style.css">  -->
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/reset.css"> 
+<link rel="stylesheet" href="__WCSS__/uploads.css">
+<link rel="stylesheet" href="__WCSS__/normalize.css">
+<link rel="stylesheet" href="__WCSS__/wen.css">
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<script type="text/javascript" src="__COM__/js/index.js" ></script>
+<script type="text/javascript" src="__WJS__/upload.js"></script>
+<script type="text/javascript" src="__WJS__/rem.js"></script>
+<style>
+	.sett_xiug{display:none;}
+	.button,#clipBtn{width: 130px;font-size: 16px;}
+</style>
+<body style="background: #ebebeb;">
+	<div class="header">
+	    <div class="header_l" style="width:33.3%;">
+	    <a href="javascript:history.go(-1)"><img src="__WIMG__/jiant.png" alt=""></a>
+	    </div>
+	    <div class="header_c" style="width:33.3%;"><h2>个人中心</h2></div>
+	    <div class="header_r" style="width:33.3%;"></div>
+	</div>
+    <div class="setlistbox" style="margin-top:49px;">
+		<div class="addBankCard">
+			<a href="{:U('User/Setuname')}" class="clear_wl"> <p>昵称</p></a>
+		</div>
+		<div class="addBankCard">
+			<a href="{:U('User/Mobile')}" class="clear_wl"> <p>手机号</p></a>
+		</div>
+        <div class="addBankCard">
+			<a href="{:U('Growth/Cardinfos')}" class="clear_wl"> <p>银行卡</p></a>
+		</div>
+    </div>
+		
+</body>
+</html>

@@ -1,0 +1,513 @@
+[ 2021-01-09T11:37:10+08:00 ] 127.0.0.1 /User/Personal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0070s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163430 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163430 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username`,`is_dailishang`,`userid`,`account`,`img_head`,`use_grade`,`user_credit`,`vip_grade`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2021-01-09T11:37:10+08:00 ] 127.0.0.1 /Public/home/wap/jsa/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+ERR: 无法加载控制器:Public
+
+[ 2021-01-09T11:37:12+08:00 ] 127.0.0.1 /User/Personal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0040s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163432 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163432 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0060s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username`,`is_dailishang`,`userid`,`account`,`img_head`,`use_grade`,`user_credit`,`vip_grade`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2021-01-09T11:37:12+08:00 ] 127.0.0.1 /Public/home/wap/jsa/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+ERR: 无法加载控制器:Public
+
+[ 2021-01-09T11:37:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-09T11:37:41+08:00 ] 127.0.0.1 /User/Personal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163461 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163461 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username`,`is_dailishang`,`userid`,`account`,`img_head`,`use_grade`,`user_credit`,`vip_grade`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2021-01-09T11:37:42+08:00 ] 127.0.0.1 /Public/home/wap/jsa/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+ERR: 无法加载控制器:Public
+
+[ 2021-01-09T11:37:42+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2021-01-09T11:37:50+08:00 ] 127.0.0.1 /User/Personal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0060s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163470 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163470 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0040s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `username`,`is_dailishang`,`userid`,`account`,`img_head`,`use_grade`,`user_credit`,`vip_grade`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2021-01-09T11:37:50+08:00 ] 127.0.0.1 /Public/home/wap/jsa/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:Public
+
+[ 2021-01-09T11:37:51+08:00 ] 127.0.0.1 /User/Sharecode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0080s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0070s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163471 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163471 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0040s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2021-01-09T11:38:12+08:00 ] 127.0.0.1 /User/Teamdets.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0060s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163492 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0060s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163492 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0060s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_user` WHERE `pid` = 999854 ORDER BY userid desc  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user` WHERE ( activate = 1 AND pid=999854 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user` WHERE ( activate = 0 AND pid=999854 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user_quote` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user_quote` WHERE ( `time` >= 1610121600 AND `time` <= 1610207999  ) AND `form` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'quote' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user_quote` WHERE `uid` = 999854 AND `status` = 0 AND `form` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: v F:\web\1002\shop\Home\Controller\UserController.class.php 第 268 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ysk_user` WHERE `pid` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `userid`,`username` FROM `ysk_user` WHERE ( pid="999854" )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ysk_user` WHERE ( pid = 999854 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: uinfo F:\web\1002\shop\Runtime\Cache\Home\3e693a8485ba89e93e42f888d71c179b.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2021-01-09T11:38:24+08:00 ] 127.0.0.1 /Public/home/wap/jsa/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+ERR: 无法加载控制器:Public
+
+[ 2021-01-09T11:38:25+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0050s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163505 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163505 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0040s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_banner` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ysk_banner` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SELECT `img_head`,`userid`,`account`,`username`,`user_credit`,`releas_time`,`is_reward`,`today_releas`,`quanxian`,`vip_grade`,`activate`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_store` [ RunTime:0.0060s ]
+SQL: SELECT `cangku_num`,`fengmi_num`,`dt_jifen`,`active_num`,`paidan`,`red_integral`,`paidan_profit`,`qiangdan_profit` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0050s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'false_user' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'add_user' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ysk_config` WHERE `name` = 'min_balance' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE `name` = 'platform_name' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `total_revenue` FROM `ysk_store` WHERE `uid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_paidanprofit` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ysk_paidanprofit` WHERE `uid` = 999854 AND `status` = 0 ORDER BY id  [ RunTime:0.0000s ]
+SQL: SELECT `is_paidan`,`automatic_paidan_switch` FROM `ysk_user` WHERE ( userid=999854 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(1) AS tp_count FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `purchase_num` FROM `ysk_trans` WHERE `payin_id` = 999854 AND `form` = 0 ORDER BY id LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: can_get F:\web\1002\shop\Home\Controller\IndexController.class.php 第 69 行.
+NOTIC: [8] Undefined variable: is_setnums F:\web\1002\shop\Home\Controller\IndexController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 81 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 81 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: activate F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 126 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 126 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 134 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 134 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 142 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 142 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: quanxian F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 150 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given F:\web\1002\shop\Runtime\Cache\Home\517da85fa85c61e0150f26278cd22254.php 第 150 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2021-01-09T11:38:43+08:00 ] 127.0.0.1 /User/Personal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0040s ]
+SQL: SELECT `value`,`tip` FROM `ysk_config` WHERE `name` = 'TOGGLE_WEB_SITE' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ysk_user` [ RunTime:0.0040s ]
+SQL: SELECT `status`,`session_id` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_trans` [ RunTime:0.0050s ]
+SQL: SELECT `id` FROM `ysk_trans` WHERE `dj_end_time` <= 1610163523 AND `pay_state` = 3 AND `payin_id` = 999854 AND `is_lin` = 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ysk_paidan_profit` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `ysk_paidan_profit` WHERE `dj_end_time` <= 1610163523 AND `pay_state` = 1 AND `payin_id` = 999854  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ysk_config` [ RunTime:0.0040s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `value` FROM `ysk_config` WHERE ( name='zidong_sell_time' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `username`,`is_dailishang`,`userid`,`account`,`img_head`,`use_grade`,`user_credit`,`vip_grade`,`unlock` FROM `ysk_user` WHERE `userid` = 999854 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m F:\web\1002\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2021-01-09T11:38:43+08:00 ] 127.0.0.1 /Public/home/wap/jsa/jquery.min.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:Public
+

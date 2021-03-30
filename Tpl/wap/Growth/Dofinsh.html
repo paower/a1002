@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>冻结订单</title>
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__WJS__/responsive.tabs.js"></script>
+<script src="__WJS__/iscroll.js"></script>
+<script type="text/javascript" src="__WJS__/jquery.reveal.js"></script>
+<body class="bg96">
+
+<div class="header">
+    <div class="header_l">
+        <a href="{:U('Growth/Purchase',array('type'=>1))}"><img src="__WIMG__/jiant.png" alt=""></a>
+    </div>
+    <div class="header_c"><h2>冻结订单</h2></div>
+    <div class="header_r"></div>
+</div>
+
+<div class="demo">
+    <div class="accordion">
+
+        <foreach name="orders" item="v">
+            <div class="accordion-handle">
+                <h4>
+                    <p class="accmrp">{$Think.lang.Buyamount}：{$v['pay_nums']}RMB<span class="acco_con_span">{$Think.lang.ywc}</span></p>
+                    <if condition="$v['time'] gt 0 and $v['dj_start_time'] neq 0">
+                        <p>{$v['dj_start_time']|date="Y-m-d H:i:s",###}
+                    <elseif condition="$v['dj_start_time'] eq 0" />
+                        <p>尚未冻结...</p>
+                    <else/>
+                        <p>{$v['dj_start_time']|date="Y-m-d H:i:s",###}  
+                    </if>
+                        <!-- <span>{$Think.lang.skr}：{$v['hold_name']}</span> -->
+					
+					<!-- <span>抢单</span> -->
+					<!-- <span>买入单</span> -->
+					
+					</p>
+                    <if condition="$v['time'] gt 0">
+                        <p id="countdown">倒计时：<b id="timer{$key}" style="font-weight:normal;">{$v['day']}天 {$v['house']}小时{$v['min']}分钟</b><span>冻结订单</span></p>
+                        <p id="countdown">预计总收益：
+                        <?php echo $v['pay_nums'] + $v['dj_num']; ?>
+                        <span>奖励：
+                            {$v['dj_num']}
+                        </span></p>
+                    </if>
+                    <form action="{:U('Growth/Dofinsh')}" method="post">
+                        <if condition="$v[time] elt 0 AND $v[is_lin] eq 1 AND $v['dj_start_time'] neq 0">
+                            <input type="hidden" name="yingc" value="{$v.id}">
+                            <input type="hidden" name="token_code" value="{$token_code}"/>
+                            <p id="countdown">倒计时结束收益:{$v['pay_nums']+$v['dj_num']}
+                                <if condition="$v['is_lindj'] eq 0">
+                                    <button style="border-radius: 30px;background: red;border: 0px;width: 80px;height: 30px;color: #fff;float: right;" type="submit">确认领取</button>
+                                </if>
+                            </p>
+                        </if>
+                    </form>
+                </h4>
+                <i></i>
+            </div>
+            <div class="accordion-content por">
+                <!-- <div class="acco_con_up"> -->
+                    <!-- <p><b>{$Think.lang.skrxm1}：</b><span> {$v['hold_name']}</span></p> -->
+                    <!-- <p><b>{$Think.lang.sjhm}：</b><span><//?php -->
+                        <!-- echo substr_replace($v['umobile'],'****',3,4); -->
+                        <!-- ?></span></p> -->
+                    <!-- <p><b>{$Think.lang.bankname}：</b><span>{$v['bname']}</span></p> -->
+                    <!-- <p><b>{$Think.lang.cardnum}：</b><span>{$v['cardnum']}</span></p> -->
+                    <!-- <p><b>{$Think.lang.openbranch}：</b><span>{$v['openrds']}</span></p> -->
+                    <!-- <p><b>{$Think.lang.jyje}：</b><span>{$v['pay_nums']}RMB</span></p> -->
+                    <!-- <p><b>{$Think.lang.zt}：</b><span class="acco_con_span">{$Think.lang.ywc}</span></p> -->
+                <!-- </div> -->
+                <!-- <div class="acco_con_upa"> -->
+                    <!-- <h3>{$Think.lang.dkjt}</h3> -->
+                    <!-- <div class="shangcjt"> -->
+                        <!-- <div class="containera"> -->
+                            <!-- <a href="{:U('Growth/Paidimg',array('id'=>$v['id']))}"><img src="{$v['trans_img']}"  ></a> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </foreach>
+
+        <notempty name="page">
+            <!-- <ul class="pagination">{$page}</ul> -->
+        </notempty>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.accordion').respTabs({
+            model: 'accordions'
+        });
+    });
+
+
+    var addTimer = function(){
+        var list = [],
+            interval;
+            
+        return function(id,timeStamp){
+            if(!interval){
+                interval = setInterval(go,1);
+            }
+            
+            list.push({ele:document.getElementById(id),time:timeStamp});
+        }
+        
+        function go() {  
+            for (var i = 0; i < list.length; i++) {
+                
+                list[i].ele.innerHTML = changeTimeStamp(list[i].time);  
+                if (!list[i].time)  
+                    list.splice(i--, 1);  
+            }  
+        }
+
+        //传入unix时间戳，得到倒计时
+        function changeTimeStamp(timeStamp){
+            var distancetime = new Date(timeStamp*1000).getTime() - new Date().getTime();
+            if(distancetime > 0){
+　　　　　　　　　　　　　　//如果大于0.说明尚未到达截止时间              
+                var ms = Math.floor(distancetime%1000);
+                var sec = Math.floor(distancetime/1000%60);
+                var min = Math.floor(distancetime/1000/60%60);
+                var hour =Math.floor(distancetime/1000/60/60%24);
+                var day =Math.floor(distancetime/1000/86400);
+                
+                if(ms<100){
+                    ms = "0"+ ms;
+                }
+                if(sec<10){
+                    sec = "0"+ sec;
+                }
+                if(min<10){
+                    min = "0"+ min;
+                }
+                if(hour<10){
+                    hour = "0"+ hour;
+                }
+                return day+"天"+hour + "小时" +min + "分钟" +sec+"秒";
+            }else{
+　　　　　　　　　　　　　　//若否，就是已经到截止时间了
+                return "已截止！"
+            }    
+        }
+    }();
+    <foreach name="orders" item="v">
+        <if condition="$v['time'] gt 0">
+            addTimer("timer{$key}",{$v['dj_end_time']});
+        </if>
+    </foreach>
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>我的团队</title>
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<body class="bg96">
+
+<div class="header">
+    <div class="header_l">
+        <a href="javascript:history.go(-1)"><img src="__WIMG__/jiant.png" alt=""></a>
+    </div>
+    <div class="header_c"><h2>我的团队</h2></div>
+    <div class="header_r"><a href="###" onclick="getQuote()">抢名额</a></div>
+</div>
+
+<div class="big_width100 por">
+	
+	<div class="share_ul">
+            <div class="share_ul_l">
+                <img src="__IMGHEAD__/{$pinfo['img_head']}" alt="">
+                <div class="share_p">
+                    <p>姓名:{$pinfo['username']}</p>
+                    <p>账号:{$pinfo['account']}</p>
+                    <p>电话:{$pinfo['mobile']}</p>
+                    
+                </div>
+            </div>			
+			<div class="shijin">
+				<span>已激活:{$num}</span>
+				<span>未激活:{$wei}</span><br />
+				<span>团队:{$usercount}</span>
+				<span>未激活:{$weiteam1}</span>
+			</div>
+			<div class="dengjxias dengjxiasa">名额({$user_quote_num})</div>	
+	
+    <form action="{:U('User/Teamdets')}" method="post">
+        <div class="zySearch">
+            <input id="searchInput" name="uinfo" class="search-input" value="{$uinfo}" type="text" placeholder="搜索账号/手机号码">
+            <button class="search-btn btn">搜索</button>
+        </div> 
+    </form>
+
+    <foreach name="muinfo" item="v">
+        <div class="share_ul">
+            <div class="share_ul_l">
+                <img src="__IMGHEAD__/{$v['img_head']}" alt="">
+                <div class="share_p">
+                    <p>{$v['username']}</p>
+                    <p>账号:{$v['account']}</p>
+                    <p>电话:{$v['mobile']}</p>
+                    <p>团队:{$v['team_num']}</p>
+                    
+                </div>
+            </div>
+				<div class="shijin">{$v['reg_date']|date="Y-m-d H:i:s",###}</div>
+                <if condition="$v['activate'] eq 0 ">
+                 <button class="dengjxias dengjxiasa" style="margin-right: 20%; height: 25px; line-height: 20px;" onclick="jihuo({$v['userid']},{$v['pid']})">激活</button>
+                 <elseif condition="$v['activate'] eq 1" /> <div class="dengjxias" style="margin-right: 20%;">已激活</div>
+                </if>
+				<if condition="$v['vip_grade'] eq 0 "><div class="dengjxias">体验会员
+                <elseif condition="$v['vip_grade'] eq 1" /> <div class="dengjxias dengjxiasa">普通会员
+                <elseif condition="$v['vip_grade'] eq 2" /><div class="dengjxias dengjxiasa">蓝钻会员
+                <elseif condition="$v['vip_grade'] eq 3" /><div class="dengjxias dengjxiasa">金钻会员
+                <elseif condition="$v['vip_grade'] eq 4" /><div class="dengjxias dengjxiasa">VIP 会员
+				</if>
+                <//if condition="$v['vip_grade'] eq 0">
+                <!--//<div class="dengjxias">
+                //普通用户
+                <//else />
+                //<div class="dengjxias dengjxiasa">
+                //VIP -->
+                <///if>
+            </div>
+        </div>
+    </foreach>
+</div>
+<script type="text/javascript">
+    function jihuo(id,pid){
+        $.post('/User/jihuo',{'id':id,'pid':pid},function(res){
+            if(res.status == 1){
+                    layer.msg(res.msg);
+                    setTimeout("location.reload()",1000);
+                }else{
+                    layer.msg(res.msg);
+                    setTimeout("location.reload()",1000);
+                }
+        },'json');
+    }
+
+
+    function getQuote(){
+        layer.confirm('<span style="color:#000000">您是否进行抢名额？</span>',{
+            btn:['获取','取消']
+        },function(){
+            $.get('{:U("User/getQuote/form/1")}',function(res){
+                if(res.status == 1){
+                    layer.msg(res.message);
+                    setTimeout(function(){window.location.reload();},1000);
+                }else{
+                    layer.msg(res.message);
+                }
+            },'json');
+        });
+    }
+</script>
+</body>
+
+</html>

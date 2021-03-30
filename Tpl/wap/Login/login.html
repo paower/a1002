@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>  {$Think.lang.login}</title>
+<link rel="stylesheet" href="__WCSS__/login.css">
+<link rel="stylesheet" href="__WCSS__/normalize.css">
+<script src="__WJS__/rem.js"></script>
+<body class="bgf5">
+
+<div class="login-container">
+	<div class="language">
+		<div class="yuyan">
+			<!-- <span>{$Think.lang.lang}:</span> -->
+			<select   onchange="gradeChange(this.value)">
+				<option selected value="zh-cn">{$Think.lang.lang1}</option>
+				<option value="en-us">{$Think.lang.lang2}</option>
+			</select>
+	    </div>
+	</div>
+	<div class="formbox">
+		<div class="logo">
+          <div>
+			<img src="{$logo}">
+          </div>
+		</div>
+		<form name="formlogin" id="loginForm" class="formlogin" method="post" action="{:U('Login/checkLogin')}">
+			<div class="input_box">
+				
+				<input type="text" name="account" class="username" placeholder="{$Think.lang.mobile}/UID" autocomplete="off"/>
+			</div>
+			<div class="input_box">
+				
+				<input type="password" name="password" class="password" placeholder="{$Think.lang.loginpwd}" oncontextmenu="return false" onpaste="return false" />
+			</div>
+			<div  class="inde-btn">
+				<button id="submit" type="button" onclick="login()">{$Think.lang.login1}</button>
+			</div>
+			<div class="extra_btn">
+				<a style="width:100%;text-align:center; text-decoration:underline;" href="{:U('Login/register')}">{$Think.lang.has_account}</a>
+				<!-- <a href="{:U('login/getpsw')}">{$Think.lang.forget_pwd}?</a> -->
+				<!-- <a href="#">APP下载</a> -->
+		    </div>
+		</form>
+	</div>
+</div>
+
+</body>
+<script>
+function gradeChange(ss){
+
+	if(ss == 'en-us'){
+		msg_alert('您不在该地区,无法切换');
+		setTimeout(function(){
+			window.location.reload();
+		},1000);
+	}   
+}
+
+</script>
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<!--<script src="__WJS__/common.js"></script>-->
+
+<!--表单验证-->
+<script src="__WJS__/jquery.validate.min.js?var1.14.0"></script>
+<!--commonjs-->
+<script type="text/javascript" src="__COM__/layer/layer.js" ></script>
+<script type="text/javascript" src="__COM__/js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<script type="text/javascript" src="__COM__/js/index.js"></script>
+</html>

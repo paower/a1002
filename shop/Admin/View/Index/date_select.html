@@ -1,0 +1,113 @@
+<extend name="Public/layout"/>
+<block name="style" >
+    <link rel="stylesheet" type="text/css" href="__LYUI__/css/lyui.extend.min.css">
+    <link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/style.css">
+    <link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/datePacker.css">
+    <script src="__ADMIN_JS__/jquery-1.10.2.js"></script>
+</block>
+<style>
+#div1 {
+    min-width: 670px;
+}
+</style>
+<block name="main">
+   <div id="main" class="col-xs-12 col-sm-9 main" style="overflow-y: scroll;">
+        <!-- 面包屑导航 -->
+        <ul class="breadcrumb">
+            <li><i class="fa fa-map-marker"></i></li>
+           <foreach name="_menu_tab['name']" item="tab_v" >
+            <li class="text-muted">{$tab_v}</li>
+            </foreach>
+        </ul>
+
+        <!-- 主体内容区域 -->
+        <div class="tab-content ct-tab-content">
+            <div class="panel-body">
+                <div class="builder formbuilder-box">
+                        
+                        <div class="form-group"></div>
+
+                        <!-- 顶部工具栏按钮 -->
+                        <div class="builder-toolbar">
+                            <div class="row">
+                                <!-- 工具栏按钮 -->
+                                <!-- 搜索框 -->
+                            </div>
+                        </div>
+                        
+                        <!-- 数据列表 -->
+                        <div class="builder-container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="builder-table">
+                                        <div class="panel panel-default table-responsive">
+                                            <table class="table table-bordered table-striped table-hover">
+                                                <div style="padding: 10px">
+                                                    <h2>选择日期</h2>
+                                                    <div id="div1"></div>
+                                                    <p style="color:red;">请您尝试选中某个日期出现红色闪烁框后，点击键盘上下左右键来选择日期</p>
+                                                    <input type="button" value="提交" style="background-color: #2699ed;border: 1px solid;">
+                                                    <!-- <input type="button" value="更新日历值"> -->
+                                                    <input type="button" value="设置为指定年份">
+                                                    <!-- <input type="button" value="设置为指定星期不可选"> -->
+                                                    <p>当前选中日期集合：<span id="a"></span></p>
+                                                </div>
+                                                
+                                            </table>
+                                        </div>
+
+                                        <notempty name="table_data_page">
+                                            <ul class="pagination">{$table_data_page}</ul>
+                                        </notempty>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+    </div>                   
+</div>
+</block>
+<block name="script">
+    <script type="text/javascript" src="__LYUI__/js/lyui.extend.min.js"></script>
+  
+       <script src="__ADMIN_JS__/fullYearPicker.js"></script>
+         <script>
+            //$("[date='2019-11-2']").addClass("selected")
+            //示例
+            $(function(){ 
+                $('#div1').fullYearPicker({
+                    disable:false,//只读
+                    year:"2020",//指定年份
+                    initDate:{$data_arr},//初始化选中日期
+                    yearScale: { min: 1949, max: 2100 },//初始化日历范围
+                    format:"YYYY-MM-DD",//日期格式化  YYYY-MM-DD  YYYY-M-D
+                    cellClick: function(dateStr, isDisabled){},
+                    choose:function (a) {
+                       $("#a").text(JSON.stringify(a));
+                    }
+                });
+            })
+            $('input').click(function () {
+                switch (this.value) {
+                    case '提交': sub($('#div1').fullYearPicker('getSelected'));; break;
+                    case '更新日历值': $('#div1').fullYearPicker('acceptChange'); alert('更新值成功，切换年份查看效果'); break;
+                    case '设置为指定年份': var year = prompt('请输入4位年份数字'); if (/^\d{4}$/.test(year)) $('#div1').fullYearPicker('setYear', parseInt(year)); else alert('年份为4位数字！'); break;
+                    case '设置为指定星期不可选': var day = prompt('请输入0~6的数字，不输入则设置所有星期可选'); if (/^[0-6]*$/.test(day)) $('#div1').fullYearPicker('setDisabledDay', day); else alert('请输入0~6的数字！');
+                }
+            });
+
+            //日期提交
+            function sub(date){
+                $.post("{:U('Index/date_select')}",{date:date},function(res){
+                    if(res.status==1){
+                        alert('提交成功');
+                    }else{
+                        alert('提交失败');
+                    }
+                });
+            }
+        </script>
+    
+</block>

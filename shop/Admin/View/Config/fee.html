@@ -1,0 +1,257 @@
+<extend name="Public/layout"/>
+<block name="style" >
+    <link rel="stylesheet" type="text/css" href="__LYUI__/css/lyui.extend.min.css">
+    <link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/style.css">
+</block>
+
+<block name="main">
+   <div id="main" class="col-xs-12 col-sm-9 main" style="overflow-y: scroll;">
+        <!-- 面包屑导航 -->
+        <ul class="breadcrumb">
+            <li><i class="fa fa-map-marker"></i></li>
+            <foreach name="_menu_tab['name']" item="tab_v" >
+            <li class="text-muted">{$tab_v}</li>
+            </foreach>
+             <li class="text-muted">积分释放率</li>
+        </ul>
+
+        <!-- 主体内容区域 -->
+        <div class="tab-content ct-tab-content">
+            <div class="panel-body">
+                <div class="builder formbuilder-box">
+                    <div class="builder-tabs builder-form-tabs">
+                        <ul class="nav nav-tabs">
+
+                            <li class="">
+                                <a href="{:U('Config/group2',array('group'=>1))}">基本设置</a>
+                            </li>
+                            <!-- <li class="">
+                                <a href="{:U('Config/group3')}">众筹设置</a>
+                            </li> -->
+                            <li class="active">
+                                <a href="{:U('Config/group4')}">奖励设置</a>
+                            </li>
+
+                            <!-- <li class="">
+                                <a href="{:U('Config/group1',array('group1'=>5))}">实时价格设置</a>
+                            </li> -->
+                            <li class="">
+                                <a href="{:U('Config/group',array('group'=>3))}">网站开关</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group"></div>
+                    <div class="builder-container" >
+                        <div class="row" >
+                            <div class="col-xs-12" >
+                                <!-- <form action="{:U('Config/groupSave')}" method="post" class="form-horizontal form form-builder" style="margin-bottom:20px">
+                                <div class="form-type-list">
+
+                                   <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                        <label class="left control-label">积分基础加速：</label>
+                                        <div style="width:200px" class="input-group">
+                                            <input type="text" name="sell_fee" class="form-control" value="{$info.sell_fee}" >
+                                            <span class="input-group-addon">%</span>
+                                        </div>
+                                    </div>
+                                <div class="form-group"></div>
+                                <div class="form-group bottom_button_list">
+                                    <a class="btn btn-primary submit ajax-post" type="submit" target-form="form-builder">保存</a>
+                                    <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a>
+                                        </div>
+                                    </div>
+                                </form> -->
+
+                                <form action="{:U('Config/setQuote')}" method="post" class="form-horizontal form form-builder fee2" style="margin-bottom:20px">
+                                        注册名额<hr style="margin-top: 0px;width: 100%">
+                                        <div class="form-type-list">
+
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">开放名额数量：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="quote" class="form-control" value="{$quote}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">抢名额开始时间：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="rush_start_quote" class="form-control" value="{$rush_start_quote}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">抢名额结束时间：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="rush_end_quote" class="form-control" value="{$rush_end_quote}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">每人限制名额数：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="everyone_limit_num" class="form-control" value="{$everyone_limit_num}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group"></div>
+                                        <div class="form-group bottom_button_list">
+                                            <a class="btn btn-primary submit ajax-post" type="submit" target-form="fee2">保存</a>
+                                            <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- 抢名额 -->
+                                <form action="{:U('Config/setQuote')}" method="post" class="form-horizontal form form-builder fee2" style="margin-bottom:20px">
+                                        抢名额<hr style="margin-top: 0px;width: 100%">
+                                        <div class="form-type-list">
+
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">开放名额数量：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="qiang_quote" class="form-control" value="{$qiang_quote}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">抢名额开始时间：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="qiang_quote_start_time" class="form-control" value="{$qiang_quote_start_time}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">抢名额结束时间：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="qiang_quote_end_time" class="form-control" value="{$qiang_quote_end_time}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group item_config[WEB_SITE_TITLE] ">
+                                            <label class="left control-label">每人限制名额：</label>
+                                            <div style="width:200px" class="input-group">
+                                                <input type="text" name="qinag_everyone_limit_num" class="form-control" value="{$qinag_everyone_limit_num}" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group"></div>
+                                        <div class="form-group bottom_button_list">
+                                            <a class="btn btn-primary submit ajax-post" type="submit" target-form="fee2">保存</a>
+                                            <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- end抢名额 -->
+
+                                <!-- <form action="{:U('Config/setQuote')}" method="post" class="form-horizontal form form-builder fee2" style="margin-bottom:20px"> -->
+                                        <!-- 【抢单】冻结时间倍数<hr style="margin-top: 0px;width: 100%"> -->
+                                        <!-- <div class="form-type-list"> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">冻结开始时间：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="one_dj_start" class="form-control" value="{$one_dj_start}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">冻结结束时间：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="one_dj_end" class="form-control" value="{$one_dj_end}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">倍数：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="one_dj_m" class="form-control" value="{$one_dj_m}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">冻结开始时间：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="two_dj_start" class="form-control" value="{$two_dj_start}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">冻结结束时间：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="two_dj_end" class="form-control" value="{$two_dj_end}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">倍数：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="two_dj_m" class="form-control" value="{$two_dj_m}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">冻结开始时间：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="three_dj_start" class="form-control" value="{$three_dj_start}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">冻结结束时间：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="three_dj_end" class="form-control" value="{$three_dj_end}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">倍数：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="three_dj_m" class="form-control" value="{$three_dj_m}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- <div class="form-group"></div> -->
+                                        <!-- <div class="form-group bottom_button_list"> -->
+                                            <!-- <a class="btn btn-primary submit ajax-post" type="submit" target-form="fee2">保存</a> -->
+                                            <!-- <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a> -->
+                                        <!-- </div> -->
+                                    <!-- </div> -->
+                                <!-- </form> -->
+                                <!-- <form action="{:U('Config/setQuote')}" method="post" class="form-horizontal form form-builder fee2" style="margin-bottom:20px"> -->
+                                        <!-- 【排单】冻结时间倍数<hr style="margin-top: 0px;width: 100%"> -->
+                                        <!-- <div class="form-type-list"> -->
+                                        <!-- <volist name="pd_dj_m" id="vos"> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                            <!-- <label class="left control-label">{$vos['title']}：</label> -->
+                                            <!-- <div style="width:200px" class="input-group"> -->
+                                                <!-- <input type="text" name="{$vos['name']}" class="form-control" value="{$vos['value']}" > -->
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                        <!-- </volist> -->
+                                        <!-- <div class="form-group"></div> -->
+                                        <!-- <div class="form-group bottom_button_list"> -->
+                                            <!-- <a class="btn btn-primary submit ajax-post" type="submit" target-form="fee2">保存</a> -->
+                                            <!-- <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a> -->
+                                        <!-- </div> -->
+                                    <!-- </div> -->
+                                <!-- </form> -->
+                               
+                                <!-- <form action="{:U('Config/setQuote')}" method="post" class="form-horizontal form form-builder fee2" style="margin-bottom:20px"> -->
+                                    <!-- 团队折扣/订单收益<hr style="margin-top: 0px;width: 100%"> -->
+                                    <!-- <div class="form-type-list"> -->
+                                    <!-- <volist name="steamarr" id="vo"> -->
+                                        <!-- <div class="form-group item_config[WEB_SITE_TITLE] "> -->
+                                        <!-- <label class="left control-label">{$vo['title']}：</label> -->
+                                        <!-- <div style="width:200px" class="input-group"> -->
+                                            <!-- <input type="text" name="{$vo['name']}" class="form-control" value="{$vo['value']}" > -->
+                                            <!-- <span class="input-group-addon"> -->
+                                                <!-- <if condition="$vo['name'] eq 'zero_points'"> -->
+                                                    <!-- % -->
+                                                <!-- <else/> -->
+                                                    <!-- 折 -->
+                                                <!-- </if> -->
+                                            <!-- </span> -->
+                                        <!-- </div> -->
+                                        <!-- </div> -->
+                                    <!-- </volist> -->
+                                    <!-- <div class="form-group"></div> -->
+                                    <!-- <div class="form-group bottom_button_list"> -->
+                                        <!-- <a class="btn btn-primary submit ajax-post" type="submit" target-form="fee2">保存</a> -->
+                                        <!-- <a class="btn btn-danger return" onclick="javascript:history.back(-1);return false;">取消</a> -->
+                                    <!-- </div> -->
+                                    <!-- </div> -->
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                   
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript" src="__LYUI__/js/lyui.extend.min.js"></script>
+</block>
